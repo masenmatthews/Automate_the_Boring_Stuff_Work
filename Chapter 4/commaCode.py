@@ -1,9 +1,6 @@
 spam = ['cats', 'dogs', 'horses', 'birds']
 spam.insert(-1, 'and')
-spam.append(',')
+for x in range(len(spam[0:-1])):
+    print spam[x] + ',',
 
-# Currently breaks when ran with the spam += ',' in the for loop - don't run or have fun trying to get out
-
-for val in spam:
-    spam += ','
-    print(val),
+print spam[-1]
